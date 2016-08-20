@@ -1,0 +1,17 @@
+{
+  "name": "dockerwebpack",
+  "version": "1.0.0",
+  "description": "Test running webpack --watch in a docker container via docker-compose",
+  "license": "BSD-3-Clause",
+  "repository": "https://github.com/nikolaybotevb/dokerwebpack",
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.13.2",
+    "webpack": "^1.13.2"
+  },
+  "scripts": {
+    "webpack": "webpack --watch"
+  }
+}
