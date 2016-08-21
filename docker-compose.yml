@@ -2,12 +2,8 @@ version: '2'
 services:
   webpack:
     image: node:6.4
-    user: 1000:1000
-    environment:
-      - HOME=/home/user
-    tmpfs: /home/user
     volumes:
       - .:/code
     working_dir: /code
     tty: true
-    command: npm run webpack
+    command: bash -c 'npm install && exec npm run webpack'
