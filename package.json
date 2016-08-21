@@ -12,6 +12,6 @@
     "webpack": "^1.13.2"
   },
   "scripts": {
-    "webpack": "webpack --watch-stdin"
+    "webpack": "webpack --progress --colors --debug --output-pathinfo --watch-stdin --watch-poll=3000"
   }
 }
