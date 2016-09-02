@@ -1,9 +1,9 @@
 version: '2'
 services:
   webpack:
-    image: node:6.4
+    image: centos:7
     volumes:
       - .:/code
     working_dir: /code
     tty: true
-    command: bash -c 'npm install && exec npm run webpack'
+    command: bash -lc 'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.6/install.sh | bash && cd && . ~/.nvm/nvm.sh && cd - && nvm install && npm install && exec npm run webpack'
