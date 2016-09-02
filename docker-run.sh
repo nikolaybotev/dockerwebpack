@@ -1,11 +1,8 @@
 #!/bin/bash
 
 exec docker run --rm \
-  -u 1000:1000 \
-  -e "HOME=/home/user" \
-  --tmpfs /home/user \
   -v $(pwd):/project \
   -w /project \
   --tty \
-  node:6.4 \
-  npm run webpack
+  centos:7 \
+  bash -lc 'cd && curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.6/install.sh | bash && . ~/.nvm/nvm.sh && cd - && nvm install && npm install && exec npm run webpack'
